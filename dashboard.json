@@ -1,0 +1,65 @@
+{
+  "widgets": [
+    {
+      "type": "text",
+      "x": 0,
+      "y": 0,
+      "width": 24,
+      "height": 2,
+      "properties": {
+        "markdown": "# MB - PROJECT 17: CENTRALIZED LOG MONITORING\n**Owner:** MB | **Region:** ap-south-1 | **Instance:** i-0cace8a5dd1dccfa8"
+      }
+    },
+    {
+      "type": "metric",
+      "x": 0,
+      "y": 2,
+      "width": 24,
+      "height": 7,
+      "properties": {
+        "title": "Project17 EC2 CPU Utilization",
+        "view": "timeSeries",
+        "region": "ap-south-1",
+        "period": 300,
+        "stat": "Average",
+        "metrics": [
+          ["AWS/EC2", "CPUUtilization", "InstanceId", "i-0cace8a5dd1dccfa8"]
+        ]
+      }
+    },
+    {
+      "type": "metric",
+      "x": 0,
+      "y": 9,
+      "width": 12,
+      "height": 6,
+      "properties": {
+        "title": "Project17 Incoming Log Events",
+        "view": "timeSeries",
+        "region": "ap-south-1",
+        "period": 300,
+        "stat": "Sum",
+        "metrics": [
+          ["AWS/Logs", "IncomingLogEvents", "LogGroupName", "/project17/ec2/system"]
+        ]
+      }
+    },
+    {
+      "type": "metric",
+      "x": 12,
+      "y": 9,
+      "width": 12,
+      "height": 6,
+      "properties": {
+        "title": "Project17 Incoming Log Bytes",
+        "view": "timeSeries",
+        "region": "ap-south-1",
+        "period": 300,
+        "stat": "Sum",
+        "metrics": [
+          ["AWS/Logs", "IncomingBytes", "LogGroupName", "/project17/ec2/system"]
+        ]
+      }
+    }
+  ]
+}
